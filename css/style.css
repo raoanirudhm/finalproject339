@@ -1,0 +1,143 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main *:not(p):not(img[src="images/Me.jpeg"]) {
+    text-align: center;
+    margin: auto;
+  }
+  
+  main img:not([src="images/Me.jpeg"]) {
+    display: block;
+    margin: auto;
+  }
+  
+html, body {
+    font-family: Arial, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+   body {
+    background-color: #F0F4F8;
+  }
+   nav {
+    background-color: #D9E2EC;
+  }
+   nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+   nav ul li {
+    margin: 10px;
+  }
+   nav ul li a {
+    text-decoration: none;
+    color: black;
+  }
+   main {
+    max-width: 800px;
+    margin: auto;
+    background-color: #BCCCDC;
+  }
+   main h1 {
+    text-align: center;
+  }
+   .skip-link {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+   .skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+   .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .flex p {
+    flex-basis: calc(50% - 20px);
+    margin: 20px 10px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  
+  .flex img {
+    flex-basis: calc(50% - 20px);
+    margin: 20px 10px;
+    height: auto;
+  }
+  
+  .grid img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .grid p {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.4rem;
+  }
+  
+  @media (max-width: 600px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+    }
+    .grid {
+      grid-template-columns: repeat(1, auto);
+    }
+    .grid img {
+      margin-bottom: 10px;
+    }
+    html, body {
+      overflow-x: hidden;
+    }
+  }
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .grid img.relevant-languages {
+      width: 100px;
+    }
+  }
+   @media (min-width: 1025px) {
+    .grid img.relevant-languages {
+      width: 150px;
+    }
+  } 
+  button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+  }
